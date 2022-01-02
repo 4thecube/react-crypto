@@ -1,0 +1,68 @@
+.product {
+  margin: 30px;
+  //remove
+  margin-top: 150px;
+  //
+  min-width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 10px 0 rgb(172, 164, 164);
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 10px 10px 0 rgb(97, 4, 139);
+  }
+
+  .image-container {
+    margin-top: -40px;
+    height: 50%;
+
+    .product-picture {
+      border-radius: 10px;
+    }
+  }
+  .description {
+    height: 50%;
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+    .author {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        border-radius: 50px;
+      }
+
+      .author-name {
+        margin-left: 15px;
+      }
+    }
+  }
+  .prices-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    text-transform: uppercase;
+    .prices {
+      display: flex;
+      flex-direction: row;
+      font-weight: 900;
+
+      .crypto-currency {
+      }
+      .usd-currency {
+        color: red;
+      }
+    }
+  }
+}

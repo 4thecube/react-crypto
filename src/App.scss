@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-list {
+  display: inline-flex;
+  width: 1080px;
+  height: 800px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.card-list::-webkit-scrollbar {
+  width: 1px;
+}
+
+.card {
+  margin: 20px;
+  width: 60px;
+  border: 2px solid plum;
+  padding: 20px;
+}
+
+.sr {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
