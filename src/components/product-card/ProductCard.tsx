@@ -29,7 +29,7 @@ export const ProductCard: React.FC<Item> = ({
         <img className="product-picture" src={picture} alt={title} />
       </div>
       <div className="description">
-        <h2>{title}</h2>
+        <h2 className="product-title">{title}</h2>
         <div className="author">
           <img
             width="50px"
@@ -43,12 +43,14 @@ export const ProductCard: React.FC<Item> = ({
         </div>
         <div className="prices-container">
           <div className="prices">
-            <span className="crypto-currency">{price.crypto} MATIC</span>
-            <span className="usd-currency">${price.usd} </span>
+            <p className="grey">last price</p>
+            <div className="prices-value">
+              <span className="crypto-currency">{price.crypto} MATIC</span>
+              <span className="usd-currency">${price.usd} </span>
+            </div>
           </div>
           <div className="items-sold">
-            <p>items sold</p>
-            <p>256</p>
+            <p className="grey">256 sold</p>
           </div>
         </div>
       </div>

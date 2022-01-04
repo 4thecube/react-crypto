@@ -40,26 +40,15 @@
   }
 
   .product-container {
+    width: 97%;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    scrollbar-width: none;
   }
 }
 
-.card {
-  margin: 20px;
-  width: 60px;
-  border: 2px solid plum;
-  padding: 20px;
-}
-
-// .sr {
-//   display: flex;
-//   flex-direction: row;
-//   overflow: scroll;
-// }
-
 *[tabIndex]:focus {
-  outline: 2px solid red;
+  outline: 5px solid black;
 }

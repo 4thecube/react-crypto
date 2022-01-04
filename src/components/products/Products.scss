@@ -1,8 +1,12 @@
 .card-list {
   display: inline-flex;
-  width: 1440px;
-  overflow-x: scroll;
+  justify-content: flex-start;
+  width: 1500px;
+  height: 800px;
   scroll-behavior: smooth;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
 }
 
 .card-list::-webkit-scrollbar {

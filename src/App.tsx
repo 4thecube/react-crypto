@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import axios from "axios";
+
+import { Products } from "./components/products/Products";
 
 import { Product } from "./types/product";
 
 import "./App.scss";
-import { Products } from "./components/products/Products";
 
-import background from "./assets/background3.png";
-
-function App(): JSX.Element {
+function App() {
   const [products, setProducts] = useState<Product[]>([]);
 
   const caller = async () => {
