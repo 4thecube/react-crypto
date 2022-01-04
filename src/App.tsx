@@ -1,18 +1,20 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { Products } from "./components/products/Products";
 
-import { Product } from "./types/product";
+import { Product, ResponseBody } from "./types/product";
 
 import "./App.scss";
 
 function App() {
+  const [mockedResponse, setMockedResponse] = useState<ResponseBody>();
   const [products, setProducts] = useState<Product[]>([]);
 
   const caller = async () => {
     const { data } = await axios.get("https://json-mock-data.herokuapp.com/");
-    setProducts(data);
+    setProducts(data.products);
+    setMockedResponse(data);
   };
 
   useEffect(() => {
