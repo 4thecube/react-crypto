@@ -8,37 +8,35 @@ import { Product } from "../../types/product";
 
 import "./Products.scss";
 
-interface ProductsProps {
+interface Props {
   products: Product[];
 }
 
-export const Products: FC<ProductsProps> = ({ products }) => {
+export const Products: FC<Props> = ({ products }) => {
   const productsContainerRef = useRef<HTMLDivElement>(null);
-
   const srollOffset = 1000;
+
   return (
     <>
-      <>
-        <ArrowButton
-          productsContainerRef={productsContainerRef}
-          text="&#x02039;"
-          offset={-srollOffset}
-        />
-        <div ref={productsContainerRef} className="card-list">
-          {products.length ? (
-            products.map((item: Product) => (
-              <ProductCard key={item.id} {...item} />
-            ))
-          ) : (
-            <Loader />
-          )}
-        </div>
-        <ArrowButton
-          productsContainerRef={productsContainerRef}
-          text="&#x0203A;"
-          offset={srollOffset}
-        />
-      </>
+      <ArrowButton
+        productsContainerRef={productsContainerRef}
+        text="&#x02039;"
+        offset={-srollOffset}
+      />
+      <div ref={productsContainerRef} className="products-list">
+        {products && products.length ? (
+          products.map((item: Product) => (
+            <ProductCard key={item.id} {...item} />
+          ))
+        ) : (
+          <Loader />
+        )}
+      </div>
+      <ArrowButton
+        productsContainerRef={productsContainerRef}
+        text="&#x0203A;"
+        offset={srollOffset}
+      />
     </>
   );
 };

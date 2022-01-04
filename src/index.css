@@ -1,3 +1,12 @@
+:root {
+  --var-white: #fff;
+  --var-black: #000;
+  --var-red: #e41c1c;
+  --var-shadow: #aca4a4;
+  --var-grey: #9e9e9e;
+  --var-light-grey: #d6d3d3;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Ubuntu", "Cantarell",

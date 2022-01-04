@@ -1,14 +1,14 @@
-.card-list {
+.products-list {
   display: inline-flex;
   justify-content: flex-start;
   width: 1500px;
   height: 800px;
   scroll-behavior: smooth;
   overflow: auto;
-  -ms-overflow-style: none; /* IE 11 */
-  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.card-list::-webkit-scrollbar {
+.products-list::-webkit-scrollbar {
   width: 0;
 }

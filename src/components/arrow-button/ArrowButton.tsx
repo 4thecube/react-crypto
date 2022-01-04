@@ -1,4 +1,4 @@
-import React, { RefObject } from "react";
+import { RefObject } from "react";
 
 import "./ArrowButton.scss";
 
@@ -14,6 +14,7 @@ export const ArrowButton: React.FC<Props> = ({
   offset,
 }) => {
   const handleClick = () => {
+    // can I use ! in this case?
     productsContainerRef!.current!.scrollLeft += offset;
   };
 

@@ -18,6 +18,7 @@ export interface ResponseBody {
   author: {
     firstName: string;
     lastName: string;
+    picture: string;
   };
   products: Product[];
 }

@@ -1,23 +1,9 @@
-import React from "react";
+import { Product } from "../../types/product";
+
 import "./ProductCard.scss";
 
-interface Item {
-  id: number;
-  title: string;
-  picture: string;
-  price: {
-    usd: number;
-    crypto: number;
-  };
-  author: {
-    firstName: string;
-    lastName: string;
-    picture: string;
-  };
-}
-
-export const ProductCard: React.FC<Item> = ({
-  id,
+export const ProductCard: React.FC<Product> = ({
+  sold,
   title,
   picture,
   price,
@@ -50,7 +36,7 @@ export const ProductCard: React.FC<Item> = ({
             </div>
           </div>
           <div className="items-sold">
-            <p className="grey">256 sold</p>
+            <p className="grey">{sold} sold</p>
           </div>
         </div>
       </div>
