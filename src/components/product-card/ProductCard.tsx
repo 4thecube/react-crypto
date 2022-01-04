@@ -24,15 +24,9 @@ export const ProductCard: React.FC<Item> = ({
   author,
 }) => {
   return (
-    <div className="product">
+    <div tabIndex={0} className="product">
       <div className="image-container">
-        <img
-          className="product-picture"
-          src={picture}
-          alt={title}
-          width="250px"
-          height="250px"
-        />
+        <img className="product-picture" src={picture} alt={title} />
       </div>
       <div className="description">
         <h2>{title}</h2>
@@ -49,10 +43,10 @@ export const ProductCard: React.FC<Item> = ({
         </div>
         <div className="prices-container">
           <div className="prices">
-            <span className="crypto-currency">MATIC {price.crypto}</span>{" "}
+            <span className="crypto-currency">{price.crypto} MATIC</span>
             <span className="usd-currency">${price.usd} </span>
           </div>
-          <div>
+          <div className="items-sold">
             <p>items sold</p>
             <p>256</p>
           </div>

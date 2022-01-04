@@ -1,18 +1,50 @@
 .app {
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .title-container {
+    width: 97%;
+    height: 80vh;
+    background-image: url("../src/assets/background3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .title {
+      color: white;
+      text-shadow: 1px 1px 2px black;
+      padding: 30px;
+      text-transform: uppercase;
+      width: 60%;
+      font-size: 92px;
+      font-weight: 900;
+    }
+  }
 
-.card-list {
-  display: inline-flex;
-  width: 1080px;
-  height: 800px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
+  .subtitle-container {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .subtitle {
+      font-weight: 900;
+      font-size: 42px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
 
-.card-list::-webkit-scrollbar {
-  width: 1px;
+  .product-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .card {
@@ -22,8 +54,12 @@
   padding: 20px;
 }
 
-.sr {
-  display: flex;
-  flex-direction: row;
-  overflow: scroll;
+// .sr {
+//   display: flex;
+//   flex-direction: row;
+//   overflow: scroll;
+// }
+
+*[tabIndex]:focus {
+  outline: 2px solid red;
 }

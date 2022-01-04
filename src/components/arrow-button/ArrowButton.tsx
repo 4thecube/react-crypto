@@ -4,19 +4,21 @@ import "./ArrowButton.scss";
 
 interface Props {
   text: string;
-  div: RefObject<HTMLDivElement>;
+  productsContainerRef: RefObject<HTMLDivElement>;
   offset: number;
 }
 
-export const ArrowButton: React.FC<Props> = ({ div, text, offset }) => {
+export const ArrowButton: React.FC<Props> = ({
+  productsContainerRef,
+  text,
+  offset,
+}) => {
   const handleClick = () => {
-    console.log("we scrolling");
-    console.log(div);
-    div!.current!.scrollLeft += offset;
+    productsContainerRef!.current!.scrollLeft += offset;
   };
 
   return (
-    <button tabIndex={0} onClick={() => handleClick()} className="arrow-button">
+    <button onClick={() => handleClick()} className="arrow-button">
       {text}
     </button>
   );

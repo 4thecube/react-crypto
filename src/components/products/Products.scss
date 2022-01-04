@@ -1,0 +1,10 @@
+.card-list {
+  display: inline-flex;
+  width: 1440px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.card-list::-webkit-scrollbar {
+  width: 0;
+}
